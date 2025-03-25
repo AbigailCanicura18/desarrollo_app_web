@@ -5,6 +5,10 @@
     font-family: 'Arial';
     text-align: center;
 }
+
+.P, .B{
+    margin-top: 20px ;
+}
 .container{
     background-color: #d15b19;
     width: 770px; 
@@ -21,9 +25,9 @@
     background-color: #e5a685;
     width: 700px; 
     height: 500.3px; 
-    /* position: absolute;
+    position: absolute;
     left: 22.9%; 
-    margin: 20.5px auto;   */
+    margin: 20.5px auto;   
 
 }
 
@@ -37,6 +41,9 @@
 }
 
 .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #9fcae0;
     width: 360px; 
     height: 180px; 
