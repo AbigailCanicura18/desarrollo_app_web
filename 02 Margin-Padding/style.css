@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(172, 173, 173);
+    width: 950px;
+    /* height: 600px; */
+    margin: 0 auto;   /* centra horizontalmente dentro de su contenedor */
+    padding: 20px;
+    /* display: flex; */
+}
+
+.top-nav{
+    width: 100%; /* ancho total de la pantalla */
+    height: 150px;
+    background-color: rgb(30, 94, 36);
+}
+
+.main{
+    display: flex;
+    margin-top: 20px;
+}
+
+.left{
+    background-color: blue;
+    height: 300px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.right{
+
+    background-color: rgb(255, 0, 0);
+    height: 400px;
+    flex: 3;
+    /* margin-top: 10px; */
+}
+
+.row{
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    gap: 20px; /* separa elemento dentro del contenedor */
+}
+
+.yellow{
+
+    flex: 1;  
+    background-color: rgb(240, 222, 64);
+}
+
+.row2{
+    margin: 0px 20px 0px 20px;
+    background-color: purple;
+    height: 120px;
+}
+
+
