@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: solid 1px #af03ff;  */
+}
+.container{
+    background-color: black;
+    width: 800px; 
+    height: 800px;
+    margin: 0 auto;
+    border: solid 15px rgb(228, 216, 208);
+}
+.main{
+    display: flex;
+}
+.left{
+    flex: 1;
+}
+
+.whiteRight1{
+    background-color: white;
+    width: 85%;
+    height: 250px;
+    
+}
+
+.whiteRight2{
+    background-color: white;
+    width: 85%;
+    height: 280px;
+    margin: 50px 0px 0px 0px;
+    
+} 
+
+.blue{
+    background-color: #4747ff;
+    width: 85%;
+    height: 190px;
+    margin: 30px 0px 0px 0px;
+}
+
+.right{
+    flex: 3;
+}
+.red{
+    background-color: red;
+    height: 580px;
+}
+
+.belowRight{
+    display: flex;
+    padding: 20px 0px 0px 0px;
+}
+
+.whiterectangle{
+    background-color: white;
+    flex:4;
+    height: 200px;
+}
+.minicontainer{
+    padding: 8px 0px 0px 30px;
+    flex:1;
+    display: block;
+}
+.whiteSmall{
+    background-color: white;
+    width: 100%;
+    height: 75.9px;
+
+}
+
+.yellowSmall{
+    margin-top: 35px;
+    background-color: rgb(255, 255, 144);
+    width: 100%;
+    height: 80.5px;
+
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+    outline: solid 1px rgb(159, 255, 95);
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+.container{
+    background-color: rgb(0, 0, 0);
+    width: 740px;
+    margin: 0 auto;   
+    border: solid 15px rgb(228, 216, 208);
+    height: 780px;
+    padding: 20px;
+    
+    
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    height: 200px;
+    display: flex;
+    gap: 10px;  separa elemento dentro del contenedor 
+    margin:  0px 0px 0px 0px;
+}
+
+.red{
+    flex:2;
+    width: 70%;  ancho total de la pantalla 
+    height: 500px;
+    background-color: rgb(255, 0, 0);
+    margin-left: auto;
+}
+
+
+.white{
+
+    flex: 1;  
+    background-color: rgb(255, 255, 255); */
+
+
+}
+    /* width: 24%;  ancho total de la pantalla 
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    margin-right: auto; 
+    margin: 0px 500000000px 0px 0px; 
