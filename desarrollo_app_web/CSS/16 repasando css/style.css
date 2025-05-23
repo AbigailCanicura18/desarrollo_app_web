@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: solid 3px red;   */
+}
+.container{
+    background-color: #e6e6e6;
+    margin: 50px auto;
+    border: solid 20px #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+
+}
+.arriba{
+    display: flex;
+    background-color: #e6e6e6;
+    padding-bottom: 30px;
+}
+.izquierda{
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+}
+.derecha{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0px 0px 0px 40px;
+    flex: 2;
+}
+
+.cuadrado{
+    background-color: #b2b5b4;
+    width: 550px; 
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+
+.cuadradoChico{
+    background-color: #b2b5b4;
+    width: 210px;
+    height: 250px;
+}
+
+.rectangulo{
+    background-color: #b2b5b4;
+    height: 100px;
+}      
+    
+.abajo{
+    display: flex;
+    background-color: #e6e6e6;
+    height: 500px;
+}
+
+
+.izquierdaAbajo{
+    display: flex;
+    flex: 1;
+
+}
+.derechaAbajo{
+    display: flex;
+    gap: 30px;
+    flex: 2;
+    flex-direction: column;
+    margin: 0px 0px 0px 30px;
+}
+
+.rectanguloLargo{
+    background-color: #b2b5b4;
+    width: 300px;
+    height: 100%;
+
+}
+
+.cuadradoDerecha{
+    background-color: #b2b5b4;
+    width: 470px;
+    height: 250px;
+
+}
