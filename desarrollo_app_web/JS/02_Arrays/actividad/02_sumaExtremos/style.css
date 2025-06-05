@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    border-radius: 20px;
+    height: 200px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(166, 243, 166);
+    margin: 50px 20px 20px 20px ;
+    border: solid 8px black;
+    animation: Change-border 10s infinite linear;
+
+}
+
+p{
+    color: limegreen;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(9, 182, 9);
+    outline: 2.5px solid rgb(1, 104, 1);
+    color: white; 
+    width: 170px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@keyframes Change-border{
+    0%, 100%{
+        border-color: goldenrod;
+    }
+    25%, 75%{
+        border-color: lightgreen;
+    }
+    50%{
+        border-color: darkgreen;
+    }
+}

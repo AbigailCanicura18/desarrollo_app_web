@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    border-radius: 20px;
+    height: 200px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightcoral;
+    margin: 50px 20px 20px 20px ;
+    border: solid 8px black;
+    animation: Change-border 10s infinite linear;
+
+}
+
+p{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    background-color: pink;
+    outline: 2.5px solid rgb(241, 142, 159);
+    color: white; 
+    width: 170px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@keyframes Change-border{
+    0%, 100%{
+        border-color: lightpink;
+    }
+    25%, 75%{
+        border-color: lightsalmon;
+    }
+    50%{
+        border-color: lightgoldenrodyellow;
+    }
+}
