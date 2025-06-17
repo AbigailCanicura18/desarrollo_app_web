@@ -8,7 +8,7 @@ function mayoriaEdad() {
     } else if (edad <= 17 && edad >= 0){
         document.getElementById("resultado").innerHTML = `<p>La persona es menor de Edad: ${edad}</p>`
     } else {
-        document.getElementById("resultado").innerHTML = `<p>El valor <strong>${edad}</strong> es invalido</p>`
+        document.getElementById("resultado").innerHTML = `<p>El valor <strong>${edad}</strong> es invalido</p> `
     };
 };
 
