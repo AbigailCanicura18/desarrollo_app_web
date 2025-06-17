@@ -6,20 +6,48 @@
     font-family: 'Merriweather', serif; /* Fuente seria y elegante */
 }
 
+/* --- Animation Keyframes for the H1 flickering effect ONLY --- */
+@keyframes h1-neon-flicker {
+    0% {
+        color: #6a0572; /* Dark purple text color */
+        text-shadow: 0 0 10px #e0bbe4, 0 0 20px #e0bbe4, 0 0 30px #e0bbe4; /* Purple glow */
+    }
+    50% {
+        color: #dab88c; /* Gold text color */
+        text-shadow: 0 0 10px #dab88c, 0 0 20px #dab88c, 0 0 30px #dab88c; /* Gold glow */
+    }
+    100% {
+        color: #6a0572; /* Back to dark purple text color */
+        text-shadow: 0 0 10px #e0bbe4, 0 0 20px #e0bbe4, 0 0 30px #e0bbe4; /* Back to purple glow */
+    }
+}
+
+
 /* Encabezado */
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #cfe8c9; /* Verde pastel suave */
+    background-color: #e7aaee; /* Morado pastel suave */
     padding: 30px 0;
+    /* Static neon effect for the nav bar (no flicker) */
+    box-shadow: 0 0 15px rgba(224, 187, 228, 0.7); /* Sombra sutil para el encabezado */
+    transition: box-shadow 0.5s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav:hover {
+    box-shadow: 0 0 25px rgba(232, 160, 240, 0.9), 0 0 40px rgba(224, 187, 228, 0.6); /* More intense glow on hover */
 }
 
 h1 {
-    color: #5a7f5e; /* Verde oscuro */
     font-size: 50px;
+    /* Apply the flickering animation ONLY to the h1 */
+    animation: h1-neon-flicker 2s infinite alternate; /* H1's glow and color flicker */
+    /* Removed static color/text-shadow as they are in the keyframes */
+    transition: none; /* Ensure no conflicting transitions */
 }
+
 
 /* Contenedor principal */
 .container {
@@ -29,34 +57,41 @@ h1 {
     gap: 20px;
     margin-top: 40px;
     padding: 20px;
+    background-color: #efd6f1;
 }
 
 /* Botones */
 .btn {
     padding: 15px;
     width: 320px;
-    background-color: #b8dfac; /* Verde pastel claro */
+    background-color: #957dad; /* Morado pastel claro */
     border-radius: 10px;
-    border: none;
+    border: 2px solid #dab88c; /* Borde dorado pastel */
     font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: #3e573f;
+    transition: all 0.3s ease-in-out; /* Transición para todos los cambios */
+    color: #f7ede2; /* Color de texto blanco hueso */
     font-weight: 600;
+    box-shadow: 0 0 10px #b8a9c9, 0 0 20px #b8a9c9, 0 0 30px #b8a9c9; /* Efecto neon inicial */
+    text-shadow: 0 0 5px #f7ede2; /* Sombra de texto sutil */
 }
 
 .btn:hover {
-    background-color: #9fcf95; /* Verde más intenso para hover */
+    background-color: #dab88c; /* Dorado más intenso para hover */
+    color: #6a0572; /* Morado oscuro para texto en hover */
+    box-shadow: 0 0 15px #dab88c, 0 0 30px #dab88c, 0 0 45px #dab88c; /* Efecto neon más intenso en hover */
+    transform: translateY(-3px); /* Ligero levantamiento al pasar el ratón */
 }
 
-/* Texto antes de los botones */
+/* Texto antes de los botones - REVERTED TO STATIC STYLE */
 p {
-    color: #4d684f; /* Verde grisáceo */
+    color: #4d684f; /* Verde grisáceo - REVERTED */
     font-size: 18px;
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 20px; /* Aumentando la separación con el botón */
     text-align: center;
+    text-shadow: none; /* No text shadow for paragraphs */
 }
 
 /* Grupo de botones para ejercicio 5 */
@@ -75,6 +110,6 @@ p {
 
 /* Fondo general */
 body {
-    background-color: #e3f2db; /* Verde muy suave */
+    background-color: #a969ac; /* Verde muy suave - REVERTED */
     scroll-behavior: smooth;
 }

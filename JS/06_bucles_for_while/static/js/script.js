@@ -45,11 +45,6 @@ function MostrarPares(){
         }
         document.getElementById("resultado").innerHTML = `<p>El conteo realizado hasta ${n} fue el siguiente:</p><br><strong>${numeros.join(" - ")}</strong> `;
 
-
-
-
-
-
 }
 
 
