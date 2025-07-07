@@ -1,14 +1,21 @@
-// Ejercicio 1
-function contadorN() {
-    let numero = parseInt(prompt("Ingrese un número:"));
-    let resultado = "";
-    for (let n = 1; n <= numero; n++) {
-        alert("N = " + n);
-        resultado += `<p>-->${n}<--</p>`;
+console.log("Conectado correctamente con js");
+
+
+// ✅ Ejercicio 1: Contador del 1 al N
+// Pide al usuario un número con prompt() y usa un for para mostrar los números del 1 hasta ese número.
+function contarHastaN(){
+
+    let n = parseInt(prompt("Ingresa la cantidad de veces que desear contar: "));
+
+    let numeros = [];
+
+    //bucle for
+
+    for (let i = 1; i <= n; i++){
+        numeros.push(i);
     }
-    document.getElementById("contadorN").innerHTML = resultado;
+    document.getElementById("resultado").innerHTML = `<div class = "resultado1"><p>El conteo realizado hasta ${n} fue el siguiente:</p><br><strong>${numeros.join(" - ")}</strong></div> `;
 }
-// Cambio: ahora se muestran todos los números juntos en el HTML, no solo el último.
 
 // Ejercicio 2
 function suma() {
