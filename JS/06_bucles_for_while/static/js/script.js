@@ -14,42 +14,44 @@ function contarHastaN(){
     for (let i = 1; i <= n; i++){
         numeros.push(i);
     }
-    document.getElementById("resultado").innerHTML = `<div class = "resultado1"><p>El conteo realizado hasta ${n} fue el siguiente:</p><br><strong>${numeros.join(" - ")}</strong></div> `;
+    document.getElementById("resultado").innerHTML = `<div class = "resultado1"><p>El conteo realizado fue hasta el: ${n} </p><br><strong>${numeros.join(" - ")}</strong></div> `;
 }
 
-// Ejercicio 2
-function suma() {
+
+//  ✅ Ejercicio 2: Suma de 5 números
+// Con un while, pide 5 números al usuario (uno por uno con prompt()) y muestra la suma total en pantalla.
+function suma(){
+
+    //bucle while
+    let i = 0;
+    let suma = 0
+    let num = [];
     let n = 0;
-    let total = 0;
-    let listN = [];
-    while (n < 5) {
-        let numero = parseInt(prompt("Ingrese un número:"));
-        if (isNaN(numero)) continue;
-        listN.push(numero);
-        total += numero;
-        n++;
-    }
-    alert("Lista de números: " + listN.join(" - "));
-    document.getElementById("suma").innerHTML =
-        `<p>El total de la suma es: ${total}</p>`;
+    while (i <= 4) {
+        let n = parseInt(prompt("Ingrese numeros para la suma porfavor: "));
+        num.push(n);
+        suma += n;
+    i++;
+    }   
+    document.getElementById("resultado").innerHTML = `<p>La suma de los numeros es :</p><br><strong>${suma}</strong> `;
 }
-// Cambio: validación para evitar NaN si no ingresan número.
 
-// Ejercicio 3
+// ✅ Ejercicio 3: Mostrar solo los pares entre 1 y 20
+// Usa un for para mostrar en pantalla solo los números pares del 1 al 20.
 function mostrarPar() {
     let listPar = [];
     for (let n = 1; n <= 20; n++) {
         if (n % 2 === 0) {
             listPar.push(n);
-            alert(n + " es par");
+
         }
     }
     document.getElementById("mostrarPar").innerHTML =
         `<p>Los números pares son: ${listPar.join(", ")}</p>`;
 }
-// Cambio: eliminé alert innecesario de "no es par" para no saturar al usuario.
 
-// Ejercicio 4
+// ✅ Ejercicio 4: Contador regresivo con condición
+// Pide un número al usuario y, usando un while, cuenta regresivamente hasta 0. Si el número es menor que 0, muestra "Número no válido".
 function contadorRegresivo() {
     let numero = parseInt(prompt("Ingrese número para la cuenta regresiva:"));
     let resultado = "";
@@ -63,7 +65,7 @@ function contadorRegresivo() {
     }
     document.getElementById("contadorRegresivo").innerHTML = resultado;
 }
-// Cambio: guarda todos los pasos en el HTML, y corrige mensaje "número no válido".
+
 
 // Ejercicio 5
 function tablaMultiplicar() {
