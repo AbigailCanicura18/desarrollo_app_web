@@ -20,6 +20,14 @@ function contarHastaN(){
 
 //  ✅ Ejercicio 2: Suma de 5 números
 // Con un while, pide 5 números al usuario (uno por uno con prompt()) y muestra la suma total en pantalla.
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
 function suma(){
 
     //bucle while
@@ -80,7 +88,10 @@ function tablaMultiplicar() {
     for (let n = 1; n <= 10; n++) {
         let mult = numero * n;
         resultado += `<p>${numero} x ${n} = ${mult}</p>`;
+<<<<<<< HEAD
         console.log(resultado);
+=======
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
     }
     document.getElementById("tablaMultiplicar").innerHTML = resultado;
 }
@@ -112,7 +123,10 @@ function mostrarLetras() {
         for (let i = 0; i < palabra.length; i++) {
             alert(`Letra ${i + 1}: ${palabra[i]}`);
             resultado += `<p>${palabra[i]}</p>`;
+<<<<<<< HEAD
             console.log(resultado);
+=======
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
         }
     }
     document.getElementById("mostrarLetras").innerHTML = resultado;
@@ -127,7 +141,11 @@ function validarContrasena() {
     while (contrasena !== "admin123") {
         contrasena = prompt("Contraseña incorrecta. Intente nuevamente:");
     }
+<<<<<<< HEAD
 
+=======
+    alert("Acceso concedido");
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
     document.getElementById("ej8").innerHTML = "<p>Acceso concedido</p>";
 }
 
@@ -143,13 +161,17 @@ function promedioNotas() {
         let nota = parseFloat(prompt("Ingrese la nota " + (i + 1) + ":"));
         notas.push(nota);
         suma += nota;
+<<<<<<< HEAD
     
         
+=======
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
     }
 
     let promedio = suma / cantidad;
     alert("El promedio es: " + promedio);
     document.getElementById("ej9").innerHTML =
+<<<<<<< HEAD
         `<p>Las notas ingresadas son: ${notas.join(" - ")}</p><p>Promedio: ${promedio}</p>`;
         console.log(promedio)
 }
@@ -176,15 +198,38 @@ function contarMayoresEdad() {
 
     document.getElementById("ej10").innerHTML =
         `<p>Edades: ${edades.join(" - ")}</p><p>Mayores de edad: ${mayores}</p>`;
+=======
+        `<p>Notas: ${notas.join(" - ")}</p><p>Promedio: ${promedio}</p>`;
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
 }
 
 
 
+//✅ Ejercicio 10: Contar cuántos son mayores de edad
+//Pide con prompt() cuántas personas vas a ingresar. Por cada persona, pide la edad y muestra al final cuántas son mayores de edad (18+).
+
+function contarMayoresEdad() {
+    let cantidad = parseInt(prompt("¿Cuántas personas va a ingresar?"));
+    let edades = [];
+    let mayores = 0;
+
+    for (let i = 0; i < cantidad; i++) {
+        let edad = parseInt(prompt("Edad de la persona " + (i + 1) + ":"));
+        edades.push(edad);
+        if (edad >= 18) {
+            mayores++;
+        }
+    }
+
+<<<<<<< HEAD
 
 
 
 
-
-
-
+=======
+    alert("Cantidad de mayores de edad: " + mayores);
+    document.getElementById("ej10").innerHTML =
+        `<p>Edades: ${edades.join(" - ")}</p><p>Mayores de edad: ${mayores}</p>`;
+}
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
 

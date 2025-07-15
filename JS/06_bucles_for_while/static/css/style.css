@@ -142,8 +142,19 @@ p {
 /* Fondo general */
 body {
     background: linear-gradient(to bottom, #f8c6d8, #d7bce8, #c7e0f9, #c9f5d5, #fff4b1);
+<<<<<<< HEAD
     scroll-behavior: smooth;
 }
 
 
 
+=======
+    scroll-behavior: smooth;
+}
+
+/* Fondo general */
+body {
+    background-color: #a969ac; /* Verde muy suave - REVERTED */
+    scroll-behavior: smooth;
+}
+>>>>>>> 57b8eb56009a68b544cb44cc1dd8fff84b77ccfb
