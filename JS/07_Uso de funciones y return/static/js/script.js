@@ -92,3 +92,21 @@ function tablaMultiplicar() {
     document.getElementById("tablaMultiplicar").innerHTML = resultado;
 }
 
+🟦 Ejercicio 2: Comparar dos números
+📌 Usa input para pedir dos números. 
+Crea una función con dos parámetros que compare los valores y retorne un mensaje indicando cuál número es mayor, menor o si son iguales. Muestra el mensaje 
+
+en html  .
+
+🟦 Ejercicio 3: Verificar si un número es par o impar
+📌 Solicita un número usando input.
+ Diseña una función que reciba ese número como parámetro, determine si es par o impar, y retorne un mensaje con el resultado. Muestra ese mensaje al usuario  en html  .
+
+🟦 Ejercicio 4: Validar si un número es primo
+📌 Captura un número usando input. 
+Luego, crea una función que reciba ese número como parámetro y retorne un mensaje indicando si el número es primo o no. Muestra el resultado con 
+html  .
+
+🟦 Ejercicio 5: Calcular potencia con bucle
+📌 Pide al usuario una base y un exponente mediante input. 
+Usa una función que reciba ambos valores como parámetros, calcule la potencia utilizando un bucle, y retorne el resultado. Finalmente, muestra el valor calculado en html.
