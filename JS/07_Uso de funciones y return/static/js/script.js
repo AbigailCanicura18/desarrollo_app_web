@@ -3,8 +3,7 @@ console.log("Conectado correctamente con js");
 
 // 🟦 Ejercicio 1: Repetir una palabra N veces
 // 📌 Solicita al usuario una palabra y un número usando prompt. Luego, crea una función que reciba ambos valores como parámetros,
-//  repita la palabra N veces utilizando un bucle, y retorne el resultado completo como una cadena de texto. Muestra el resultado con alert.
-
+//  repita la palabra N veces utilizando un bucle, y retorne el resultado completo como una cadena de texto. Muestra el resultado con alert. 
 function repitePalabra(palabra, numeroVeces){
 
     let resultado = "";
@@ -25,30 +24,39 @@ function mostrarPalabra(){
 }
 
 
-//  ✅ Ejercicio 2: Suma de 5 números
-// Con un while, pide 5 números al usuario (uno por uno con prompt()) y muestra la suma total en pantalla.
-function suma(){
+// 🟦 Ejercicio 2: Comparar dos números
+// 📌 Usa input para pedir dos números. 
+// Crea una función con dos parámetros que compare los valores y retorne un mensaje indicando cuál número es mayor, menor o si son iguales. Muestra el mensaje en html.
+function compararNumeros(num1, num2) {
+    if (num1 > num2) {
+        return `${num1} es mayor que ${num2}`;
+    } else if (num1 < num2) {
+        return `${num1} es menor que ${num2}`;
+    } else {
+        return `${num1} es igual a ${num2}`;
+    }
+}
+function mostrarComparacion() {
+    let input1 = document.getElementById("numComp1");
+    let input2 = document.getElementById("numComp2");
+    let num1 = parseFloat(input1.value);
+    let num2 = parseFloat(input2.value);
+    let resultado = compararNumeros(num1, num2);
+    document.getElementById("resultado2").textContent = resultado;
 
-    //bucle while
-    let i = 0;
-    let suma = 0
-    let num = [];
-    let n = 0;
-    while (i <= 4) {
-        let n = parseInt(prompt("Ingrese numeros para la suma porfavor: "));
-        num.push(n);
-        suma += n;
-    i++;
-    }   
-    document.getElementById("suma").innerHTML = `<p>La suma de los numeros es :</p><br><strong>${suma}</strong> `;
-
-
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Ingrese solo números.");
+    }
+    input1.value = "";
+    input1.focus();
+    input2.value = "";
 }
 
 
 
-// ✅ Ejercicio 3: Mostrar solo los pares entre 1 y 20
-// Usa un for para mostrar en pantalla solo los números pares del 1 al 20.
+// 🟦 Ejercicio 3: Verificar si un número es par o impar
+// 📌 Solicita un número usando input.
+//  Diseña una función que reciba ese número como parámetro, determine si es par o impar, y retorne un mensaje con el resultado. Muestra ese mensaje al usuario  en html.
 function mostrarPar() {
     let listPar = [];
     for (let n = 1; n <= 20; n++) {
@@ -81,32 +89,23 @@ function contadorRegresivo() {
 //✅ Ejercicio 5: Mostrar la tabla de multiplicar de un número
 //Solicita al usuario un número y usa un for para mostrar su tabla de multiplicar del 1 al 10.
 
-function tablaMultiplicar() {
-    let numero = parseInt(prompt("Ingrese que tabla desea conocer:"));
-    let resultado = "";
-    for (let n = 1; n <= 10; n++) {
-        let mult = numero * n;
-        resultado += `<p>${numero} x ${n} = ${mult}</p>`;
-        console.log(resultado);
-    }
-    document.getElementById("tablaMultiplicar").innerHTML = resultado;
-}
 
-🟦 Ejercicio 2: Comparar dos números
-📌 Usa input para pedir dos números. 
-Crea una función con dos parámetros que compare los valores y retorne un mensaje indicando cuál número es mayor, menor o si son iguales. Muestra el mensaje 
 
-en html  .
+let resultado = contarVocales("javascript");
+alert(resultado);
 
-🟦 Ejercicio 3: Verificar si un número es par o impar
-📌 Solicita un número usando input.
- Diseña una función que reciba ese número como parámetro, determine si es par o impar, y retorne un mensaje con el resultado. Muestra ese mensaje al usuario  en html  .
+console.log(resultado)
 
-🟦 Ejercicio 4: Validar si un número es primo
-📌 Captura un número usando input. 
-Luego, crea una función que reciba ese número como parámetro y retorne un mensaje indicando si el número es primo o no. Muestra el resultado con 
-html  .
 
-🟦 Ejercicio 5: Calcular potencia con bucle
-📌 Pide al usuario una base y un exponente mediante input. 
-Usa una función que reciba ambos valores como parámetros, calcule la potencia utilizando un bucle, y retorne el resultado. Finalmente, muestra el valor calculado en html.
+
+
+
+
+// 🟦 Ejercicio 4: Validar si un número es primo
+// 📌 Captura un número usando input. 
+// Luego, crea una función que reciba ese número como parámetro y retorne un mensaje indicando si el número es primo o no. Muestra el resultado con 
+// html  .
+
+// 🟦 Ejercicio 5: Calcular potencia con bucle
+// 📌 Pide al usuario una base y un exponente mediante input. 
+// Usa una función que reciba ambos valores como parámetros, calcule la potencia utilizando un bucle, y retorne el resultado. Finalmente, muestra el valor calculado en html.
