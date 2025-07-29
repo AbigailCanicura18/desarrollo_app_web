@@ -1,4 +1,3 @@
-
 function ejecutarConteo(limite) {
     let cantidad = 0;
     
