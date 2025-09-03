@@ -1,0 +1,185 @@
+/* ================================================= */
+/* ============== ESTILOS GENERALES ================ */
+/* ================================================= */
+/* Se aplican a ambos ejercicios */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* Fondo base rosa muy claro, como se pidió para el ejercicio 1 */
+    background-color: #fce4ec;
+    color: #333;
+    /* Centra los contenedores de los ejercicios */
+    display: flex;
+    flex-direction: column; /* Apila los ejercicios verticalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Espacio entre los dos ejercicios */
+    padding: 2rem 0; /* Espacio vertical */
+    margin: 0;
+}
+
+/* Estilo del contenedor principal para cada ejercicio */
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Estilos comunes para los grupos de formulario */
+.form-group, .fieldset {
+    margin-bottom: 1.2rem;
+}
+
+label, legend {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* Estilos comunes para inputs y select */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    box-sizing: border-box; /* Evita que el padding afecte el ancho total */
+    transition: border-color 0.3s;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para los botones de opción y casillas de verificación */
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contenedores de botones */
+.button-container, .extra-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Estilos base para todos los botones */
+button {
+    flex: 1; /* Ocupan el mismo espacio disponible */
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para los párrafos de resultado y error */
+.resultado, .error {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    word-wrap: break-word; /* Evita que texto largo se desborde */
+    display: none; /* Ocultos por defecto, se muestran con JS */
+}
+
+.resultado:not(:empty), .error:not(:empty) {
+    display: block; /* Muestra el elemento solo si tiene contenido */
+}
+
+
+/* ================================================= */
+/* ======= ESTILOS EJERCICIO 1 (ROSA/BLANCO) ======= */
+/* ================================================= */
+
+#ejercicio1 h1 {
+    color: #c2185b; /* Rosa oscuro */
+}
+
+#ejercicio1 label, #ejercicio1 legend {
+    color: #ad1457; /* Rosa intermedio */
+}
+
+#ejercicio1 input:focus, #ejercicio1 select:focus {
+    outline: none;
+    border-color: #c2185b; /* Borde rosa oscuro al enfocar */
+}
+
+#ejercicio1 input[type="radio"], #ejercicio1 input[type="checkbox"] {
+    accent-color: #c2185b; /* Color del check/radio */
+}
+
+#ejercicio1 button {
+    background-color: #c2185b;
+}
+
+#ejercicio1 button[type="button"] { /* Botón 'Limpiar' */
+    background-color: #f06292;
+}
+
+#ejercicio1 button:hover {
+    background-color: #ad1457;
+}
+
+#ejercicio1 .resultado {
+    background-color: #e1f5fe;
+    border-left: 5px solid #0288d1;
+    color: #01579b;
+}
+
+#ejercicio1 .error {
+    background-color: #ffcdd2;
+    border-left: 5px solid #d32f2f;
+    color: #b71c1c;
+}
+
+
+/* ================================================= */
+/* ==== ESTILOS EJERCICIO 2 (NARANJA/AMARILLO) ===== */
+/* ================================================= */
+
+#ejercicio2 h1 {
+    color: #e65100; /* Naranja oscuro */
+}
+
+#ejercicio2 label, #ejercicio2 legend {
+    color: #f57c00; /* Naranja intermedio */
+}
+
+#ejercicio2 input:focus {
+    outline: none;
+    border-color: #e65100; /* Borde naranja oscuro al enfocar */
+}
+
+#ejercicio2 button {
+    background-color: #fb8c00; /* Naranja */
+}
+
+#ejercicio2 .extra-buttons button {
+    background-color: #ffb74d; /* Naranja más claro para botones secundarios */
+    color: #424242;
+}
+
+#ejercicio2 button:hover {
+    background-color: #ef6c00;
+}
+
+#ejercicio2 .extra-buttons button:hover {
+    background-color: #ffa726;
+}
+
+#ejercicio2 .resultado {
+    background-color: #fffde7; /* Amarillo muy claro */
+    border-left: 5px solid #fbc02d; /* Amarillo */
+    color: #5d4037;
+}
+
+#ejercicio2 .error {
+    background-color: #ffcdd2; /* Reutilizamos el estilo de error */
+    border-left: 5px solid #d32f2f;
+    color: #b71c1c;
+}
