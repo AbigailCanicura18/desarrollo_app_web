@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Combinados: Tareas y Encuesta</title>
+    
+    <link rel="stylesheet" href="static/ccs/style.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="tab-container">
+        <button class="tab-button active" data-tab="task-app">📝 Gestor de Tareas</button>
+        <button class="tab-button" data-tab="survey-app">📊 Encuesta Tecnológica</button>
+    </div>
+
+    <div class="tab-content">
+        <div id="task-app" class="content-section active">
+            <h1>Gestor de Tareas</h1>
+            <form id="task-form">
+                <input type="text" id="task-description" placeholder="Descripción de la tarea (mín. 3 caracteres)" required minlength="3">
+                <input type="date" id="task-date" required>
+                <select id="task-priority">
+                    <option value="Alta">Prioridad Alta</option>
+                    <option value="Media" selected>Prioridad Media</option>
+                    <option value="Baja">Prioridad Baja</option>
+                </select>
+                <button type="submit">Agregar Tarea</button>
+            </form>
+            <div class="filter-container">
+                <label>
+                    <input type="checkbox" id="filter-high-priority">
+                    Mostrar solo prioridad Alta
+                </label>
+            </div>
+            <ul id="task-list"></ul>
+        </div>
+
+        <div id="survey-app" class="content-section">
+            <h1>Encuesta de Preferencias</h1>
+            <form id="survey-form">
+                <fieldset>
+                    <legend>Lenguajes Favoritos</legend>
+                    <div class="input-group">
+                        <label><input type="checkbox" name="lenguajes" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="lenguajes" value="Python"> Python</label>
+                        <label><input type="checkbox" name="lenguajes" value="Java"> Java</label>
+                        <label><input type="checkbox" name="lenguajes" value="C#"> C#</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Nivel de Experiencia</legend>
+                    <div class="input-group">
+                        <label><input type="radio" name="nivel" value="Inicial" required> Inicial</label>
+                        <label><input type="radio" name="nivel" value="Intermedio"> Intermedio</label>
+                        <label><input type="radio" name="nivel" value="Avanzado"> Avanzado</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Canales de Aprendizaje</legend>
+                    <select id="learning-channels" multiple size="4">
+                        <option value="Documentación Oficial">Documentación Oficial</option>
+                        <option value="Cursos en Línea">Cursos en Línea</option>
+                        <option value="Foros y Comunidades">Foros y Comunidades</option>
+                        <option value="Videos y Tutoriales">Videos y Tutoriales</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Comentarios (Opcional)</legend>
+                    <textarea id="comments" maxlength="200" placeholder="¿Algo más que añadir?"></textarea>
+                    <div id="char-counter">200 caracteres restantes</div>
+                </fieldset>
+                <button type="submit">Enviar Encuesta</button>
+            </form>
+            <div id="survey-result" class="resultado" style="display: none;"></div>
+        </div>
+    </div>
+</div>
+
+<script defer src="static/js/script.js"></script>
+
+</body>
+</html>
