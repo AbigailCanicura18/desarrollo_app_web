@@ -1,0 +1,166 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* --- Sistema de Pestañas (Tabs) --- */
+.tab-container {
+    display: flex;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #606770;
+    transition: color 0.3s, background-color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-button.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+}
+
+.tab-content {
+    padding: 2rem;
+}
+
+.content-section {
+    display: none; /* Ocultar contenido inactivo */
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* --- Estilos Compartidos para Formularios --- */
+h1 {
+    color: #1a253c;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+    color: #0056b3;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Estilos Específicos del Gestor de Tareas --- */
+#task-app button[type="submit"] { background-color: #007bff; }
+#task-app button[type="submit"]:hover { background-color: #0056b3; }
+
+.filter-container { margin: 1.5rem 0; }
+#task-list { list-style-type: none; padding: 0; }
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    gap: 1rem;
+}
+
+#task-list li.completada .descripcion { text-decoration: line-through; color: #888; }
+#task-list .descripcion { flex-grow: 1; }
+
+.prioridad {
+    padding: 0.25rem 0.6rem;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.prioridad.Alta { background-color: #dc3545; }
+.prioridad.Media { background-color: #ffc107; color: #333; }
+.prioridad.Baja { background-color: #28a745; }
+
+/* --- Estilos Específicos de la Encuesta --- */
+#survey-app button[type="submit"] { background-color: #28a745; }
+#survey-app button[type="submit"]:hover { background-color: #218838; }
+
+.input-group { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+#char-counter {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.resultado {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #e9f7ef;
+    border-left: 5px solid #28a745;
+    line-height: 1.7;
+    border-radius: 0 8px 8px 0;
+}
