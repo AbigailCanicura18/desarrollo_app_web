@@ -57,7 +57,7 @@
     color: white; /* Texto blanco */
     outline: 2.5px solid black;
     box-shadow: 5px 5px rgb(0, 0, 0); /* Sombra con desplazamiento de 3px y opacidad del 30% */
-    width: 150px;
-    height: 50px;
-    text-align: center;
+    padding: 15;
 }
+
+
