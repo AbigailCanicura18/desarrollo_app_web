@@ -1,69 +1,104 @@
-*{
-    padding:0;
-    margin:0;
-    font-family: 'Courier New';
-    outline: solid 1px red;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
 }
 
-.container{
-    width: 100%;
-    height: 1000px;
-    background-color: #ffffff ;
-    
-    
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-.nav{
+.top {
     display: flex;
-    background-color:  #cccccc ;
-    width: 100%;
-    padding: 45px;
-}
-
-.top{
-    display: flex;
-    background-color:  #cccccc ;
-    margin: 0px auto;
-    gap: 30px;
-    width: 1500px;
-    padding: 45px;
-    justify-content: space-between;
-    
-
-}
-
-
-.title{
-    font-size: 70px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-input{
-    width: 500px;
-    height: 50px;
-    font-size: 30px;
-    margin-top: 13px;
-    display: flex;
-}
-
-
-.btn login{
-    background-color: rgb(43,120,228);
-    color: white; /* Texto blanco */
-    outline: 2.5px solid black;
-    box-shadow: 5px 5px rgb(0, 0, 0); /* Sombra con desplazamiento de 3px y opacidad del 30% */
-    width: 150px;
-    height: 50px;
-    text-align: center;
-
-
-}
-
-button{
-    display: flex;
-    justify-content: center;
+    flex-wrap: wrap; /* permite que los elementos salten de línea si no caben */
     align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    flex: 1 1 auto; /* crece y se adapta */
+    font-size: 24px;
+    margin: 0;
+}
+
+.search {
+    flex: 2 1 200px; /* ocupa espacio flexible */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin: 30px 0px 0px 40px;
-    font-size: 18px;
+    flex-shrink: 0; /* evita que se aplasten */
+}
+
+.btn.login {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn.like {
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn.add {
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* hace que se acomode en móviles */
+    gap: 20px;
+}
+
+.flex-2 {
+    flex: 2 1 300px; /* mínimo 300px, se adapta */
+}
+
+.flex-1 {
+    flex: 1 1 200px; /* mínimo 200px */
+}
+
+.box {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.definition h1 {
+    margin: 0;
+}
+
+.definition-text {
+    margin-top: 10px;
+}
+
+/* 📱 Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
 }
