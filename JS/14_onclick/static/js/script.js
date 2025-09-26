@@ -13,12 +13,12 @@ function hide(element) {
 }
 
 function liked(element) {
-    // Obtiene el span dentro del botón
+    // Busca el span que está dentro del botón
     let span = element.querySelector("span");
-    let likes = parseInt(span.innerText);
-    likes++;
-    span.innerText = likes;
+    let likes = parseInt(span.innerText); // número actual
+    likes++; // incrementa
+    span.innerText = likes; // actualiza
 
-    // Alerta
+    // Alerta cada vez que se hace click
     alert("Ninja was liked");
 }
