@@ -16,8 +16,7 @@ function liked(element) {
     // Busca el span que está dentro del botón
     let span = element.querySelector("span");
     let likes = parseInt(span.innerText); // número actual
-    likes++; // incrementa
-    span.innerText = likes; // actualiza
+    span.innerText = likes + 1; // actualiza
 
     // Alerta cada vez que se hace click
     alert("Ninja was liked");
