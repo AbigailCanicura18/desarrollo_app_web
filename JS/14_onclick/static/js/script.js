@@ -1,15 +1,24 @@
-function example(elemento) {
-    console.log("elemento clickeado", elemento);
+function login(element) {
+    // Cambia entre Login y Logout
+    if (element.innerText === "Login") {
+        element.innerText = "Logout";
+    } else {
+        element.innerText = "Login";
+    }
 }
 
-function turnOff(element) {
-    if (element.innerText == "Off"){
-        element.innerText = "On"
-    }else{
-        element.innerText = "Off"
-    };
-}
-
-function remove(element) {
+function hide(element) {
+    // Elimina el botón de "Add Definition"
     element.remove();
+}
+
+function liked(element) {
+    // Obtiene el span dentro del botón
+    let span = element.querySelector("span");
+    let likes = parseInt(span.innerText);
+    likes++;
+    span.innerText = likes;
+
+    // Alerta
+    alert("Ninja was liked");
 }
