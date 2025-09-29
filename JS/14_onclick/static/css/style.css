@@ -32,8 +32,8 @@
 .search {
     flex: 2 1 200px; /* ocupa espacio flexible */
     padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #8a8a8a;
+
 }
 
 .btn {
@@ -87,9 +87,8 @@
 
 .box {
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #a5a5a5;
     padding: 15px;
-    border-radius: 6px;
     margin-bottom: 15px;
 }
 
@@ -99,20 +98,21 @@
 
 .box_definition{
     display: flex;
-    border: #e5e5e5 solid 1.1px;
-    border-radius: 5px;
+    border: #a5a5a5 solid 1.1px;
+    margin-bottom: 20px;
+    padding: 15px;
     
 }
 
 .definition-text{
     display: flex;
     align-items: center;
+    margin-left: 70px;
+
     
 }
 
-.left{
-    margin: ;
-}
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
