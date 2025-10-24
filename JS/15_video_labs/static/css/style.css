@@ -1,140 +1,197 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: #f3f3f3;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* --- Navegación --- */
+body {
+    margin: 0 100px 0 100px;
+    min-height: 100vh;
+}
+
+/* Top Navigation */
 .top {
-    background-color: #333;
-    height: 75px;
-    border-top: 5px solid rebeccapurple;
-    color: #fff;
-    padding: 0 20px;
+    background: linear-gradient(to right, #6b21a8, #7c3aed);
+    height: 10px;
 }
 
 .nav-container {
-    width: 1080px;
-    margin: 0 auto;
     display: flex;
+    background-color: #333;
+    gap: 20px;
     justify-content: space-between;
+    padding: 15px;
     align-items: center;
-    height: 100%;
+}
+
+.nav-container h1 {
+    color: white;
+    font-size: 28px;
+    margin: 0;
 }
 
 .search {
-    padding: 10px;
-    font-size: 1.1rem;
-    width: 400px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    flex: 1;
+    padding: 8px 15px;
+    border: 2px solid #555;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.search:focus {
+    outline: none;
+    border-color: #7c3aed;
 }
 
 .btn {
-    background-color: rebeccapurple;
-    color: #fff;
-    width: 120px;
-    height: 40px;
-    border: 2px solid #000;
-    box-shadow: 4px 4px #000;
-    font-size: 1.1rem;
-    font-weight: 700;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* --- Contenedor principal --- */
+.btn:hover {
+    background-color: #6b21a8;
+}
+
+/* Main Content */
 .flex-container {
-    width: 1080px;
-    margin: 20px auto;
     display: flex;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
 }
 
+/* Left Column */
 .col-l {
-    flex: 2;
-}
-
-.col-r {
     flex: 1;
-    margin-left: 20px;
 }
 
-/* --- Columna Izquierda --- */
-#mainVideo {
+.main-video {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    height: auto;
+    aspect-ratio: 16/9;
+    background-color: #000;
 }
 
 .row {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.start {
+    flex: 1;
 }
 
 .start h1 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
 }
 
 .start h3 {
-    color: #555;
+    font-size: 14px;
     font-weight: 400;
+    color: #606060;
+    margin-bottom: 12px;
 }
 
 .user {
-    margin-top: 20px;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .avatar-s {
-    height: 64px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .user-name {
-    margin-left: 10px;
-    color: rebeccapurple;
-    font-size: 1.2rem;
-    font-weight: 900;
+    font-size: 15px;
+    font-weight: 600;
+    color: #7c3aed;
 }
 
-/* --- Columna Derecha --- */
+/* Right Column */
+.col-r {
+    width: 350px;
+    flex-shrink: 0;
+}
+
 .sub-header {
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #999;
+    border-bottom: 2px solid #e0e0e0;
+    color: #000;
 }
 
 .video-small {
     display: flex;
-    align-items: center;
-    margin: 20px 0;
+    gap: 12px;
+    margin-bottom: 15px;
     cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.video-small:hover {
+    background-color: #e8e8e8;
 }
 
 .vid-s {
-    width: 170px;
-    height: 95px;
+    width: 168px;
+    height: 94px;
     object-fit: cover;
-    margin-right: 15px;
-    border: 3px solid rebeccapurple;
-    border-radius: 5px;
+    flex-shrink: 0;
+    border: 3px solid #7c3aed;
+    border-radius: 2px;
+    background-color: #ddd;
 }
 
 .video-title {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #000;
+}
+
+@media (max-width: 992px) {
+    body {
+        margin: 0 30px 0 30px;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .col-r {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        margin: 0 15px 0 15px;
+    }
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search {
+        width: 100%;
+    }
 }
