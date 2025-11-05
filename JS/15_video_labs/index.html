@@ -1,67 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VideoLab</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="top">
-        <div class="nav-container">
-            <h1>VideoLab</h1>
-            <input type="text" placeholder="Search" name="query" class="search">
-            <button class="btn">Login</button>
-        </div>
+    <!-- top navigation -->
+    <div class="top"></div>
+    <div class="nav-container">
+        <h1>VideoLab</h1>
+        <input type="text" placeholder="Search" name="query" class="search">
+        <button class="btn">Login</button>
     </div>
 
+    <!-- main content -->
     <div class="flex-container">
 
+        <!-- left column -->
         <div class="col-l">
-            <video id="mainVideo" src="static/assets/video1.mp4" controls autoplay muted loop></video>
+<<<<<<< HEAD
+=======
+            <video class="main-video" id="mainVideo" src="static/assets/tetera.mp4" controls autoplay muted loop></video>
+>>>>>>> 90f13a5 (ok)
 
+            <!-- Video principal -->
+            <video class="main-video" poster="./resource/img/Untitled.png" controls>
+                <source src="./resource/video/GATITO CON ARROZ.mp4" type="video/mp4">
+            </video> 
+
+            <!-- video info -->
             <div class="row">
                 <div class="start">
-                    <h1 id="main-video-title">Example Video Title</h1>
+
+                    <h1 id="main-video-title">Té Perfecto: Cómo Relajarte en 5 Minutos (Receta Secreta)</h1>
                     <h3>1.3K Views | June 18, 2021</h3>
                     <div class="user">
-                        <img src="static/assets/user.png" alt="user-circle" class="avatar-s">
-                        <span class="user-name">Example User Name</span>
+                        <img src="static/assets/usuario.png" alt="user-circle" class="avatar-s">
+                        <span class="user-name">Abigail Caniucura</span>
                     </div>
                 </div>
                 <button class="btn">Subscribe</button>
             </div>
+
         </div>
 
+        <!-- right column -->
         <div class="col-r">
-            <h3 class="sub-header">Up Next</h3>
-
+<<<<<<< HEAD
             <div class="video-small" onclick="changeVideo('static/assets/video1.mp4', 'Not a Rick Roll')">
+=======
+
+            <h3 class="sub-header">Up next</h3>
+
+            <div class="video-small" onclick="changeVideo('static/assets/video1.mp4', 'El Tesoro Oculto: Lo Que NO Viste de Este Lugar')">
+>>>>>>> 90f13a5 (ok)
                 <video class="vid-s" src="static/assets/video1.mp4" muted loop onmouseover="playVideo(this)" onmouseout="pauseVideo(this)"></video>
-                <span class="video-title">Not a Rick Roll</span>
+                <span class="video-title">El Tesoro Oculto: Lo Que NO Viste de Este Lugar</span>
             </div>
 
-            <div class="video-small" onclick="changeVideo('static/assets/video2.mp4', '10 Facts About ET\'s Cat')">
+            <div class="video-small" onclick="changeVideo('static/assets/video2.mp4', 'Perdido en la Jungla: ¿Es Esto Real?')">
                 <video class="vid-s" src="static/assets/video2.mp4" muted loop onmouseover="playVideo(this)" onmouseout="pauseVideo(this)"></video>
-                <span class="video-title">10 Facts About ET's Cat</span>
+                <span class="video-title">Perdido en la Jungla: ¿Es Esto Real?</span>
             </div>
 
-            <div class="video-small" onclick="changeVideo('static/assets/video3.mp4', '5 Cosplay Tips')">
+            <div class="video-small" onclick="changeVideo('static/assets/video3.mp4', 'Islas Olvidadas: Mi Secreto de Viaje')">
                 <video class="vid-s" src="static/assets/video3.mp4" muted loop onmouseover="playVideo(this)" onmouseout="pauseVideo(this)"></video>
-                <span class="video-title">5 Cosplay Tips</span>
+                <span class="video-title">Islas Olvidadas: Mi Secreto de Viaje</span>
             </div>
 
-            <div class="video-small" onclick="changeVideo('static/assets/video4.mp4', 'Boy Battles Dinobot in Thunderdome')">
+            <div class="video-small" onclick="changeVideo('static/assets/video4.mp4', 'Encuentro Profundo: Lo Que Vive en la Oscuridad')">
                 <video class="vid-s" src="static/assets/video4.mp4" muted loop onmouseover="playVideo(this)" onmouseout="pauseVideo(this)"></video>
-                <span class="video-title">Boy Battles Dinobot in Thunderdome</span>
+                <span class="video-title">Encuentro Profundo: Lo Que Vive en la Oscuridad</span>
             </div>
+
         </div>
+
     </div>
-    
+
     <script src="static/js/script.js"></script>
 </body>
 </html>
