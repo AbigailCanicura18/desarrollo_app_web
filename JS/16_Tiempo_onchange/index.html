@@ -15,64 +15,59 @@
     <div class="container">
         <div class="nav">
             <h1 class="title">DojoWeather</h1>
-            <p>Burbank</p>
-            <p>Chicago</p>
-            <p>Dallas</p>
+            <p onclick="cargarReporte('Burbank')">Burbank</p>
+            <p onclick="cargarReporte('Chicago')">Chicago</p>
+            <p onclick="cargarReporte('Dallas')">Dallas</p>
         </div>
+
         <div class="containerTiempo">
             <div class="navegadorMini">
                 <h1 class="titulo">San Jose</h1>
                 <label for="opciones">show temperature in</label>
-                <select name="opciones" id="opciones">
-                    <option value="op1">°C</option>
-                    <option value="op2">°F</option>
+                <select name="opciones" id="opciones" onchange="convertirTemperatura(this)">
+                    <option value="c">°C</option>
+                    <option value="f">°F</option>
                 </select>
             </div>
 
-            <!-- CAMBIOS IMPORTANTES AQUÍ ABAJO -->
             <div class="row">
-                <!-- Tarjeta 1: Se reemplaza "today" por "tarjeta-clima" -->
                 <div class="tarjeta-clima">
                     <h3>Today</h3>
                     <img src="static/some_rain.png" alt="Lluvia">
                     <p class="descripcion">some rain</p>
-                    <!-- Se agrupan las temperaturas -->
                     <div class="temperaturas">
-                        <span class="maxima">24°</span>
-                        <span class="minima">18°</span>
+                        <span class="maxima temp">24°</span>
+                        <span class="minima temp">18°</span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 2: Se reemplaza "tomorrow" por "tarjeta-clima" -->
                 <div class="tarjeta-clima">
                     <h3>Tomorrow</h3>
                     <img src="static/some_sun.png" alt="Sol">
                     <p class="descripcion">some sun</p>
                     <div class="temperaturas">
-                        <span class="maxima">27°</span>
-                        <span class="minima">19°</span>
+                        <span class="maxima temp">27°</span>
+                        <span class="minima temp">19°</span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 3: Se reemplaza "friday" por "tarjeta-clima" -->
                 <div class="tarjeta-clima">
                     <h3>Friday</h3>
                     <img src="static/some_clouds.png" alt="Nubes">
                     <p class="descripcion">some clouds</p>
                     <div class="temperaturas">
-                        <span class="maxima">21°</span>
-                        <span class="minima">16°</span>
+                        <span class="maxima temp">21°</span>
+                        <span class="minima temp">16°</span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 4: Se reemplaza "saturday" por "tarjeta-clima" -->
                 <div class="tarjeta-clima">
                     <h3>Saturday</h3>
                     <img src="static/some_sun.png" alt="Sol">
                     <p class="descripcion">some sun</p>
                     <div class="temperaturas">
-                        <span class="maxima">26°</span>
-                        <span class="minima">21°</span>
+                        <span class="maxima temp">26°</span>
+                        <span class="minima temp">21°</span>
                     </div>
                 </div>
             </div>

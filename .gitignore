@@ -1,0 +1,3 @@
+# Ignorar videos y assets
+JS/15_video_labs/static/assets/*.mp4
+JS/15_video_labs/static/assets/*.png
