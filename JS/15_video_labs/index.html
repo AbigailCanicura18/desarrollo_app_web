@@ -13,7 +13,6 @@
 
 <body>
 
-    <!-- top navigation -->
     <div class="top"></div>
     <div class="nav-container">
         <h1>VideoLab</h1>
@@ -21,23 +20,20 @@
         <button class="btn">Login</button>
     </div>
 
-    <!-- main content -->
     <div class="flex-container">
 
-        <!-- left column -->
         <div class="col-l">
 
-            <video class="main-video" id="mainVideo" src="static/assets/tetera.mp4" controls autoplay muted
+            <video class="main-video" id="mainVideo" src="resources/tetera.mp4" controls autoplay muted
                 loop></video>
 
-            <!-- video info -->
             <div class="row">
                 <div class="start">
 
                     <h1 id="main-video-title">Té Perfecto: Cómo Relajarte en 5 Minutos (Receta Secreta)</h1>
                     <h3>1.3K Views | June 18, 2021</h3>
                     <div class="user">
-                        <img src="static/assets/usuario.png" alt="user-circle" class="avatar-s">
+                        <img src="resources/videolab.png" alt="user-circle" class="avatar-s">
                         <span class="user-name">Abigail Caniucura</span>
                     </div>
                 </div>
@@ -46,48 +42,44 @@
 
         </div>
 
-        <!-- right column -->
         <div class="col-r">
+            
+            <h3 class="sub-header">Up next</h3>
 
-            <div class="video-small" onclick="changeVideo('static/assets/video1.mp4', 'Not a Rick Roll')">
+            <div class="video-small"
+                onclick="changeVideo('resources/video1.mp4', 'La Luz Suave y el Santuario Interior')">
 
-
-                <h3 class="sub-header">Up next</h3>
-
-                <div class="video-small"
-                    onclick="changeVideo('static/assets/video1.mp4', 'El Tesoro Oculto: Lo Que NO Viste de Este Lugar')">
-
-                    <video class="vid-s" src="static/assets/video1.mp4" muted loop onmouseover="playVideo(this)"
-                        onmouseout="pauseVideo(this)"></video>
-                    <span class="video-title">El Tesoro Oculto: Lo Que NO Viste de Este Lugar</span>
-                </div>
-
-                <div class="video-small"
-                    onclick="changeVideo('static/assets/video2.mp4', 'Perdido en la Jungla: ¿Es Esto Real?')">
-                    <video class="vid-s" src="static/assets/video2.mp4" muted loop onmouseover="playVideo(this)"
-                        onmouseout="pauseVideo(this)"></video>
-                    <span class="video-title">Perdido en la Jungla: ¿Es Esto Real?</span>
-                </div>
-
-                <div class="video-small"
-                    onclick="changeVideo('static/assets/video3.mp4', 'Islas Olvidadas: Mi Secreto de Viaje')">
-                    <video class="vid-s" src="static/assets/video3.mp4" muted loop onmouseover="playVideo(this)"
-                        onmouseout="pauseVideo(this)"></video>
-                    <span class="video-title">Islas Olvidadas: Mi Secreto de Viaje</span>
-                </div>
-
-                <div class="video-small"
-                    onclick="changeVideo('static/assets/video4.mp4', 'Encuentro Profundo: Lo Que Vive en la Oscuridad')">
-                    <video class="vid-s" src="static/assets/video4.mp4" muted loop onmouseover="playVideo(this)"
-                        onmouseout="pauseVideo(this)"></video>
-                    <span class="video-title">Encuentro Profundo: Lo Que Vive en la Oscuridad</span>
-                </div>
-
+                <video class="vid-s" src="resources/video1.mp4" muted loop onmouseover="playVideo(this)"
+                    onmouseout="pauseVideo(this)"></video>
+                <span class="video-title">La Luz Suave y el Santuario Interior</span>
             </div>
 
+            <div class="video-small"
+                onclick="changeVideo('resources/video2.mp4', 'Neblina de Atardecer: Colores en Calma')">
+                <video class="vid-s" src="resources/video2.mp4" muted loop onmouseover="playVideo(this)"
+                    onmouseout="pauseVideo(this)"></video>
+                <span class="video-title">Neblina de Atardecer: Colores en Calma</span>
+            </div>
+
+            <div class="video-small"
+                onclick="changeVideo('resources/video3.mp4', 'La Suavidad de las Colinas Esmeralda')">
+                <video class="vid-s" src="resources/video3.mp4" muted loop onmouseover="playVideo(this)"
+                    onmouseout="pauseVideo(this)"></video>
+                <span class="video-title">La Suavidad de las Colinas Esmeralda</span>
+            </div>
+
+            <div class="video-small"
+                onclick="changeVideo('resources/video4.mp4', 'Meditación Submarina: Rayos de Paz')">
+                <video class="vid-s" src="resources/video4.mp4" muted loop onmouseover="playVideo(this)"
+                    onmouseout="pauseVideo(this)"></video>
+                <span class="video-title">Meditación Submarina: Rayos de Paz</span>
+            </div>
+            
         </div>
 
-        <script src="static/js/script.js"></script>
+    </div>
+
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
